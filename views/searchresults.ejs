@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-image: url("background3.jpg");
+            background-size: 100%;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            -webkit-text-stroke: 1px blue;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
+        <a class="navbar-brand" style="color: rgb(191, 255, 161)">Search Results</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            </ul>
+            <form method="POST" action='/search' class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" name="Search" type="search" placeholder="Search"
+                    aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <form method="POST" action='/homego' >
+               
+                <button name="homego" type="submit">Home</button>
+            </form>
+        </div>
+    </nav>
+</body>
+<body>
+    <div class="row">
+        <ul class="col-6 mx-auto" >
+    
+          <% for(let i = 0; i < x.length; i++){ %>
+            <% if(x[i] === 'Galaxy S21 Ultra' ){ %>
+                <div> 
+                <img src="/galaxy.jpg" >
+                <a href="galaxy"  >Galaxy S21 Ultra </a> 
+                <br> 
+            </div>
+            <% }%> 
+            <% if(x[i] === 'iPhone 13 Pro' ){ %>
+               <div>
+                <img width=260px height=400px src="/iphone.jpg" >
+                 <a href="iphone"  >iPhone 13 Pro </a> 
+                <br>
+            </div>
+            <% }%> 
+            <% if(x[i] === 'The Sun and Her Flowers' ){ %>
+                <div> 
+                <img width=260px height=400px src="/sun.jpg" >
+                 <a href="sun"  >The Sun and Her Flowers </a> 
+                <br>
+            </div>
+            <% }%> 
+            <% if(x[i] === 'Leaves of Grass' ){ %>
+                <div>
+                <img width=260px height=400px src="/leaves.jpg" >
+                 <a href="leaves"  >Leaves of Grass </a> 
+                <br>
+            </div>
+            <% }%> 
+            <% if(x[i] === 'Boxing Bag' ){ %>
+                <div>
+                <img width=260px height=400px src="/boxing.jpg" >
+                 <a href="boxing"  >Boxing Bag </a> 
+                <br>
+            </div>
+            <% }%> 
+            <% if(x[i] === 'Tennis Racket' ){ %>
+                <div>
+                <img width=260px height=400px src="/tennis.jpg" >
+                 <a href="tennis"  >Tennis Racket </a> 
+                <br>
+            </div>
+            <% }%> 
+            <% if(x[i] === 'not found' ){ %>
+                 <p style="color: aliceblue;"> not found </p> 
+            <% }%> 
+          <% } %>
+    
+        </ul>
+      </div>
+</body>
+</html>
+<!-- <% for(let i = 0; i < x.length; i++){ %>
+    <li> <%= x[i] %> </li>
+  <% } %> -->
